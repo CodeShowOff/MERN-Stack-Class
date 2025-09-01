@@ -1,0 +1,42 @@
+#nav {
+  text-decoration: none;
+  padding: 10px;
+}
+
+#search-bar {
+  margin-left: 100px;
+  border: 20px;
+  /* border: ; */
+}
+
+a {
+  color: white;
+  animation: backwards;
+}
+
+.left-nav {
+  margin-left: 20px;
+}
+
+#nav-div {
+  background-color: rgb(13, 13, 73);
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.box {
+  border: 5px solid black;
+  margin: 20px 50px 20px 130px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+img {
+  width: 100%; /* fills the square */
+  height: 100%; /* keeps proportion */
+  object-fit: contain; /* keeps piece shape */
+  display: block;
+  border-radius: 50%;
+}
