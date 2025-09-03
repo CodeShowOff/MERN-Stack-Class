@@ -1,0 +1,30 @@
+#nav-bar{
+    display: inline-block;
+    background-color: silver;
+    margin-right: 3px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#nav-bar-div{
+    display: flex;
+    justify-content: center;
+}
+
+p{
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.7;
+    background: #f8f9fa;
+    padding: 16px 24px;
+}
+
+body{
+    background-color: blue;
+}
+
+h2{
+    color: beige;
+    margin-left: 40%;
+    text-decoration: underline yellow;
+}
