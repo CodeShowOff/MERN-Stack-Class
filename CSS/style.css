@@ -24,3 +24,15 @@ h1{
     height: 160px;
     background-image: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=300&q=80');
 }
+
+
+#transition{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    transition: width 5s 2s;
+}
+
+#transition:hover{
+    width: 200px;
+}
