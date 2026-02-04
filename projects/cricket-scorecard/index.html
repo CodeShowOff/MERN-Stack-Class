@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cricket Scoring</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h2>Cricket Scoring</h2>
+
+    <div>
+        Batsman:
+        <select id="batSelect">
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="A3">A3</option>
+            <option value="A4">A4</option>
+            <option value="A5">A5</option>
+            <option value="A6">A6</option>
+            <option value="A7">A7</option>
+            <option value="A8">A8</option>
+            <option value="A9">A9</option>
+            <option value="A10">A10</option>
+            <option value="A11">A11</option>
+        </select> 
+        Bowler:
+        <select id="bowlSelect">
+            <option value="B1">B1</option>
+            <option value="B2">B2</option>
+            <option value="B3">B3</option>
+            <option value="B4">B4</option>
+            <option value="B5">B5</option>
+            <option value="B6">B6</option>
+            <option value="B7">B7</option>
+            <option value="B8">B8</option>
+            <option value="B9">B9</option>
+            <option value="B10">B10</option>
+            <option value="B11">B11</option>
+        </select>
+    </div>
+
+    <br>
+
+    <div>
+        <button onclick="addBall('0')">0</button>
+        <button onclick="addBall('1')">1</button>
+        <button onclick="addBall('2')">2</button>
+        <button onclick="addBall('3')">3</button>
+        <button onclick="addBall('4')">4</button>
+        <button onclick="addBall('6')">6</button>
+        <button onclick="addBall('WD')">Wide</button>
+        <button onclick="addBall('NB')">No Ball</button>
+        <button onclick="addBall('W')">Wicket</button>
+        <button onclick="undo()">Undo</button>
+    </div>
+
+    <br>
+
+    <div>
+        Score: <span id="score">0/0</span><br>
+        Overs: <span id="overs">0.0</span>
+    </div>
+
+    <br><br>
+
+    <h3>Batsmen</h3>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Name</th>
+            <th>Runs</th>
+            <th>Balls</th>
+        </tr>
+        <tr>
+            <td>A1</td>
+            <td id="A1_runs">0</td>
+            <td id="A1_balls">0</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td id="A2_runs">0</td>
+            <td id="A2_balls">0</td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td id="A3_runs">0</td>
+            <td id="A3_balls">0</td>
+        </tr>
+        <tr>
+            <td>A4</td>
+            <td id="A4_runs">0</td>
+            <td id="A4_balls">0</td>
+        </tr>
+        <tr>
+            <td>A5</td>
+            <td id="A5_runs">0</td>
+            <td id="A5_balls">0</td>
+        </tr>
+        <tr>
+            <td>A6</td>
+            <td id="A6_runs">0</td>
+            <td id="A6_balls">0</td>
+        </tr>
+        <tr>
+            <td>A7</td>
+            <td id="A7_runs">0</td>
+            <td id="A7_balls">0</td>
+        </tr>
+        <tr>
+            <td>A8</td>
+            <td id="A8_runs">0</td>
+            <td id="A8_balls">0</td>
+        </tr>
+        <tr>
+            <td>A9</td>
+            <td id="A9_runs">0</td>
+            <td id="A9_balls">0</td>
+        </tr>
+        <tr>
+            <td>A10</td>
+            <td id="A10_runs">0</td>
+            <td id="A10_balls">0</td>
+        </tr>
+        <tr>
+            <td>A11</td>
+            <td id="A11_runs">0</td>
+            <td id="A11_balls">0</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <h3>Bowlers</h3>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Name</th>
+            <th>Balls</th>
+            <th>Runs</th>
+            <th>Wickets</th>
+        </tr>
+        <tr>
+            <td>B1</td>
+            <td id="B1_balls">0</td>
+            <td id="B1_runs">0</td>
+            <td id="B1_wk">0</td>
+        </tr>
+        <tr>
+            <td>B2</td>
+            <td id="B2_balls">0</td>
+            <td id="B2_runs">0</td>
+            <td id="B2_wk">0</td>
+        </tr>
+        <tr>
+            <td>B3</td>
+            <td id="B3_balls">0</td>
+            <td id="B3_runs">0</td>
+            <td id="B3_wk">0</td>
+        </tr>
+        <tr>
+            <td>B4</td>
+            <td id="B4_balls">0</td>
+            <td id="B4_runs">0</td>
+            <td id="B4_wk">0</td>
+        </tr>
+        <tr>
+            <td>B5</td>
+            <td id="B5_balls">0</td>
+            <td id="B5_runs">0</td>
+            <td id="B5_wk">0</td>
+        </tr>
+        <tr>
+            <td>B6</td>
+            <td id="B6_balls">0</td>
+            <td id="B6_runs">0</td>
+            <td id="B6_wk">0</td>
+        </tr>
+        <tr>
+            <td>B7</td>
+            <td id="B7_balls">0</td>
+            <td id="B7_runs">0</td>
+            <td id="B7_wk">0</td>
+        </tr>
+        <tr>
+            <td>B8</td>
+            <td id="B8_balls">0</td>
+            <td id="B8_runs">0</td>
+            <td id="B8_wk">0</td>
+        </tr>
+        <tr>
+            <td>B9</td>
+            <td id="B9_balls">0</td>
+            <td id="B9_runs">0</td>
+            <td id="B9_wk">0</td>
+        </tr>
+        <tr>
+            <td>B10</td>
+            <td id="B10_balls">0</td>
+            <td id="B10_runs">0</td>
+            <td id="B10_wk">0</td>
+        </tr>
+        <tr>
+            <td>B11</td>
+            <td id="B11_balls">0</td>
+            <td id="B11_runs">0</td>
+            <td id="B11_wk">0</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <div>
+        <button onclick="newMatch()">New Match</button>
+        <button onclick="saveMatch()">Save</button>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        setInterval(() => {
+            for (let x in batsmen) {
+                document.getElementById(x + "_runs").innerText = batsmen[x].runs;
+                document.getElementById(x + "_balls").innerText = batsmen[x].balls;
+            }
+            for (let x in bowlers) {
+                document.getElementById(x + "_balls").innerText = bowlers[x].balls;
+                document.getElementById(x + "_runs").innerText = bowlers[x].runs;
+                document.getElementById(x + "_wk").innerText = bowlers[x].wickets;
+            }
+        }, 200);
+    </script>
+
+</body>
+
+</html>
